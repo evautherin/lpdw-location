@@ -22,6 +22,8 @@ extension Delegate: CLLocationManagerDelegate {
         print("locationManagerDidChangeAuthorization: \(status.description)")
         
         if status == .authorizedWhenInUse {
+            manager.desiredAccuracy = kCLLocationAccuracyBest
+            manager.distanceFilter = 150.0
             manager.startUpdatingLocation()
         }
     }
