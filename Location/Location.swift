@@ -10,7 +10,7 @@ import CoreLocation
 
 struct Location: Identifiable {
     var id: String {
-        "\(coordinate.latitude)|\(coordinate.longitude)"
+        "\(coordinate.latitude) | \(coordinate.longitude)"
     }
     
     let coordinate: CLLocationCoordinate2D
