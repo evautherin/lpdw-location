@@ -12,6 +12,7 @@ import CoreLocation
 struct LocationApp: App {
     let manager = CLLocationManager()
     let delegate = Delegate()
+    let model = Model()
     
     init() {
         print("LocationApp")
@@ -21,7 +22,7 @@ struct LocationApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(model: model)
         }
     }
 }
