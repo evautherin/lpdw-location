@@ -7,10 +7,11 @@
 
 import UIKit
 import CoreLocation
+import Combine
 
 
 class Delegate: NSObject {
-
+    let locationSubject = PassthroughSubject<CLLocation, Never>()
 }
 
 
@@ -31,6 +32,10 @@ extension Delegate: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("didUpdateLocations: \(locations.description)")
+        
+        if let location = locations.last {
+            locationSubject.send(location)
+        }
     }
 }
 

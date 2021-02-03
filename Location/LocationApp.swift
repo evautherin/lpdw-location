@@ -10,15 +10,7 @@ import CoreLocation
 
 @main
 struct LocationApp: App {
-    let manager = CLLocationManager()
-    let delegate = Delegate()
     let model = Model()
-    
-    init() {
-        print("LocationApp")
-        manager.delegate = delegate
-        manager.requestWhenInUseAuthorization()
-    }
     
     var body: some Scene {
         WindowGroup {
