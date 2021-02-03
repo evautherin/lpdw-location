@@ -11,8 +11,13 @@ struct ContentView: View {
     @ObservedObject var model: Model
     
     var body: some View {
-        List(model.locations) { location in
-            Text(location.id)
+        NavigationView {
+            List(model.locations) { location in
+                NavigationLink(destination: LocationDetail(location: location)) {
+                    Text(location.id)
+                }
+            }
+            .navigationTitle("Locations")
         }
     }
 }

@@ -14,6 +14,8 @@
 		8F1ABE8825C9652000A90264 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1ABE8725C9652000A90264 /* Delegate.swift */; };
 		8F1ABE8E25CAA5A600A90264 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1ABE8D25CAA5A600A90264 /* Model.swift */; };
 		8F1ABE9125CAAA8100A90264 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1ABE9025CAAA8100A90264 /* Location.swift */; };
+		8F1ABE9425CAE86700A90264 /* LocationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1ABE9325CAE86600A90264 /* LocationDetail.swift */; };
+		8F1ABE9725CAE8D400A90264 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1ABE9625CAE8D400A90264 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8F1ABE8725C9652000A90264 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		8F1ABE8D25CAA5A600A90264 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8F1ABE9025CAAA8100A90264 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		8F1ABE9325CAE86600A90264 /* LocationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetail.swift; sourceTree = "<group>"; };
+		8F1ABE9625CAE8D400A90264 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				8F1ABE7725C95F3D00A90264 /* LocationApp.swift */,
-				8F1ABE8725C9652000A90264 /* Delegate.swift */,
 				8F1ABE7925C95F3D00A90264 /* ContentView.swift */,
+				8F1ABE9325CAE86600A90264 /* LocationDetail.swift */,
+				8F1ABE9625CAE8D400A90264 /* MapView.swift */,
 				8F1ABE9025CAAA8100A90264 /* Location.swift */,
 				8F1ABE8D25CAA5A600A90264 /* Model.swift */,
+				8F1ABE8725C9652000A90264 /* Delegate.swift */,
 				8F1ABE7B25C95F4A00A90264 /* Assets.xcassets */,
 				8F1ABE8025C95F4A00A90264 /* Info.plist */,
 				8F1ABE7D25C95F4A00A90264 /* Preview Content */,
@@ -147,9 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F1ABE9725CAE8D400A90264 /* MapView.swift in Sources */,
 				8F1ABE8825C9652000A90264 /* Delegate.swift in Sources */,
 				8F1ABE7A25C95F3D00A90264 /* ContentView.swift in Sources */,
 				8F1ABE9125CAAA8100A90264 /* Location.swift in Sources */,
+				8F1ABE9425CAE86700A90264 /* LocationDetail.swift in Sources */,
 				8F1ABE7825C95F3D00A90264 /* LocationApp.swift in Sources */,
 				8F1ABE8E25CAA5A600A90264 /* Model.swift in Sources */,
 			);
