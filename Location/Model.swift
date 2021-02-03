@@ -18,14 +18,18 @@ class Model: ObservableObject {
     let delegate = Delegate()
     var subscription: AnyCancellable?
     
+    
     init() {
 //        delegate.locationSubject
 //            .map({ location in
 //                Location(location: location)
 //            })
         
+//        delegate.locationSubject
+//            .map(Location.init)
+
         subscription = delegate.locationSubject
-            .map(Location.init)
+            .map(\.location)
             .sink(receiveValue: { (location) in
                 self.locations.append(location)
             })

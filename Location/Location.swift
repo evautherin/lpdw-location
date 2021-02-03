@@ -9,14 +9,19 @@ import Foundation
 import CoreLocation
 
 struct Location: Identifiable {
+    let coordinate: CLLocationCoordinate2D
+
     var id: String {
         "\(coordinate.latitude) | \(coordinate.longitude)"
     }
-    
-    let coordinate: CLLocationCoordinate2D
     
     
     init(location: CLLocation) {
         self.coordinate = location.coordinate
     }
+}
+
+
+extension CLLocation {
+    var location: Location { Location(location: self) }
 }

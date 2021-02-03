@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CoreLocation
+
 
 @main
 struct LocationApp: App {
