@@ -11,9 +11,7 @@ import CoreLocation
 struct Location: Identifiable {
     let coordinate: CLLocationCoordinate2D
 
-    var id: String {
-        "\(coordinate.latitude) | \(coordinate.longitude)"
-    }
+    var id: String { "\(coordinate.latitude) | \(coordinate.longitude)" }
     
     
     init(location: CLLocation) {
