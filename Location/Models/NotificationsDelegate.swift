@@ -18,6 +18,13 @@ class NotificationsDelegate: NSObject {
             // Code du siècle dernier
             if (error != nil) {
                 print("Notification Request Authorization Error: \(error!.localizedDescription)")
+                /*
+                error! signifie :
+                Je sais que error contient une valeur, donc je la prends.
+                 
+                Si, par malheur, error n'avait de valeur,
+                j'assume le risque d'un plantage de l'app.
+                */
             }
 
             // Code avec nom distinct pour "error avec valeur" et "error optional"
