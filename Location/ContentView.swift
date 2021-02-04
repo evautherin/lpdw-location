@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct ContentView: View {
     let model: Model
@@ -18,7 +19,7 @@ struct ContentView: View {
                     Text("Locations")
                 }
 
-            OtherView()
+            OtherView(model: model)
                 .tabItem {
                     Image(systemName: "square.and.pencil")
                     Text("Other")
@@ -45,8 +46,16 @@ struct LocationsView: View {
 
 
 struct OtherView: View {
+    @ObservedObject var model: Model
+    
+    var origin: CLLocationCoordinate2D? {
+        model.locations.first?.coordinate
+    }
+    
     var body: some View {
-        Text("Other View")
+        origin.map { origin in
+            MapView(coordinate: origin, locations: model.locations)
+        }
     }
 }
 
