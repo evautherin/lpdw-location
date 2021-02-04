@@ -27,7 +27,7 @@ struct ContentView: View {
 
             Notifications()
                 .tabItem {
-                    Image(systemName: "paperplane")
+                    Image(systemName: "bell.badge")
                     Text("Notifications")
                 }
         }
