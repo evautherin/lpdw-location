@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
+
+
+struct Notifications: View {
+
+    var body: some View {
+        Button("Nofication") {
+            
+        }
+    }
+}

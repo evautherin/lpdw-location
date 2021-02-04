@@ -24,6 +24,12 @@ struct ContentView: View {
                     Image(systemName: "map")
                     Text("Locations Map")
                 }
+
+            Notifications()
+                .tabItem {
+                    Image(systemName: "paperplane")
+                    Text("Notifications")
+                }
         }
     }
 }
