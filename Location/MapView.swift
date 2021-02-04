@@ -10,13 +10,16 @@ import MapKit
 
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
+    let locations: [Location]
     @State private var region = MKCoordinateRegion()
 
     var body: some View {
-        Map(coordinateRegion: $region)
-            .onAppear {
-                setRegion(coordinate)
-            }
+        Map(coordinateRegion: $region, annotationItems: locations) { location -> MapPin in
+            MapPin(coordinate: location.coordinate)
+        }
+        .onAppear {
+            setRegion(coordinate)
+        }
     }
 
     private func setRegion(_ coordinate: CLLocationCoordinate2D) {
@@ -29,6 +32,8 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(coordinate: CLLocationCoordinate2D(latitude: 48.85, longitude: 2.34))
+        MapView(
+            coordinate: CLLocationCoordinate2D(latitude: 48.85, longitude: 2.34),
+            locations: [])
     }
 }

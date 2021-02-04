@@ -11,7 +11,7 @@ struct LocationDetail: View {
     var location: Location
 
     var body: some View {
-        MapView(coordinate: location.coordinate)
+        MapView(coordinate: location.coordinate, locations: [location])
     }
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var model: Model
+    let model: Model
 
     var body: some View {
         TabView {
