@@ -10,12 +10,12 @@ import CoreLocation
 import Combine
 
 
-class Delegate: NSObject {
+class LocationsDelegate: NSObject {
     let locationSubject = PassthroughSubject<CLLocation, Never>()
 }
 
 
-extension Delegate: CLLocationManagerDelegate {
+extension LocationsDelegate: CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         let status = manager.authorizationStatus

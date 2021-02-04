@@ -15,7 +15,8 @@ class Model: ObservableObject {
     @Published var locations = [Location]()
     
     let manager = CLLocationManager()
-    let delegate = Delegate()
+    let locationsDelegate = LocationsDelegate()
+    let notificationsDelegate = NotificationsDelegate()
     var subscription: AnyCancellable?
     
     
@@ -28,13 +29,13 @@ class Model: ObservableObject {
 //        delegate.locationSubject
 //            .map(Location.init)
 
-        subscription = delegate.locationSubject
+        subscription = locationsDelegate.locationSubject
             .map(\.location)
             .sink(receiveValue: { (location) in
                 self.locations.append(location)
             })
 
-        manager.delegate = delegate
+        manager.delegate = locationsDelegate
         manager.requestWhenInUseAuthorization()
     }
     
