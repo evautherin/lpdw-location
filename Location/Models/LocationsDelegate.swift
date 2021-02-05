@@ -20,7 +20,7 @@ extension LocationsDelegate: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         let status = manager.authorizationStatus
         
-        print("locationManagerDidChangeAuthorization: \(status.description)")
+//        print("locationManagerDidChangeAuthorization: \(status.description)")
         
         if status == .authorizedWhenInUse {
             manager.desiredAccuracy = kCLLocationAccuracyBest
