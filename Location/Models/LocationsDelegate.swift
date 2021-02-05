@@ -25,6 +25,8 @@ extension LocationsDelegate: CLLocationManagerDelegate {
         if status == .authorizedWhenInUse {
             manager.desiredAccuracy = kCLLocationAccuracyBest
             manager.distanceFilter = 150.0
+            manager.showsBackgroundLocationIndicator = true
+            manager.allowsBackgroundLocationUpdates = true
             manager.startUpdatingLocation()
         }
     }
