@@ -14,23 +14,10 @@ struct Notifications: View {
 
     var body: some View {
         Button("Notification") {
-            let content = UNMutableNotificationContent()
-            content.title = "Notification Title"
-            content.body = "Notification body"
-//            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10.0, repeats: false)
-            
-            // Create the request
-            let uuidString = UUID().uuidString
-            let request = UNNotificationRequest(identifier: uuidString,
-                                                content: content, trigger: .none)
-
-            // Schedule the request with the system.
-            let notificationCenter = UNUserNotificationCenter.current()
-            notificationCenter.add(request) { (error) in
-               if error != nil {
-                  // Handle any errors.
-               }
-            }
+            NotificationsDelegate.notify(
+                title: "A m'a cliqué dessus !",
+                body: "Ca fait pas mal"
+            )
         }
     }
 }

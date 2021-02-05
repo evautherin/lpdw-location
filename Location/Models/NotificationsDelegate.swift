@@ -46,6 +46,27 @@ class NotificationsDelegate: NSObject {
             print(granted ? "Notifications granted" : "No notifications")
         }
     }
+    
+    
+    static func notify(title: String, body: String) {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+//            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10.0, repeats: false)
+        
+        // Create the request
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString,
+                                            content: content, trigger: .none)
+
+        // Schedule the request with the system.
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request) { (error) in
+           if error != nil {
+              // Handle any errors.
+           }
+        }
+    }
 
 }
 
