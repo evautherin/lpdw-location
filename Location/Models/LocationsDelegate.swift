@@ -9,6 +9,8 @@ import UIKit
 import CoreLocation
 import Combine
 
+// 37.334361 -122.041452
+
 
 class LocationsDelegate: NSObject {
     let locationSubject = PassthroughSubject<CLLocation, Never>()

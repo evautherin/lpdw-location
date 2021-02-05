@@ -30,11 +30,11 @@ class Model: ObservableObject {
 //        delegate.locationSubject
 //            .map(Location.init)
 
-//        subscription = locationsDelegate.locationSubject
-//            .map(\.location)
-//            .sink(receiveValue: { (location) in
-//                self.locations.append(location)
-//            })
+        subscription = locationsDelegate.locationSubject
+            .map(\.location)
+            .sink(receiveValue: { (location) in
+                self.locations.append(location)
+            })
 
         subscription2 = locationsDelegate.locationSubject
             .prefix(5)
