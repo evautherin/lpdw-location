@@ -25,6 +25,9 @@ struct Notifications: View {
                 ),
                 radius: 150.0,
                 identifier: "Cupertino Bridge")
+            region.notifyOnExit = false
+            region.notifyOnEntry = true
+            
             let trigger = UNLocationNotificationTrigger(region: region, repeats: true)
             
             // Create the request
