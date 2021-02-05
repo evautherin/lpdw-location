@@ -17,12 +17,12 @@ struct Notifications: View {
             let content = UNMutableNotificationContent()
             content.title = "Notification Title"
             content.body = "Notification body"
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10.0, repeats: false)
+//            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10.0, repeats: false)
             
             // Create the request
             let uuidString = UUID().uuidString
             let request = UNNotificationRequest(identifier: uuidString,
-                                                content: content, trigger: trigger)
+                                                content: content, trigger: .none)
 
             // Schedule the request with the system.
             let notificationCenter = UNUserNotificationCenter.current()
